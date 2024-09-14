@@ -110,3 +110,7 @@ FROM fortune_companies
 WHERE paid_time_off_days >=20 OR avg_employee_tenure >=7
 ORDER BY revenue desc;
 
+--8. Which company in the technology industry has the most revenue, and what's their revenue?
+SELECT company_name, MAX(revenue)
+FROM fortune_companies
+WHERE industry = "Technology";
